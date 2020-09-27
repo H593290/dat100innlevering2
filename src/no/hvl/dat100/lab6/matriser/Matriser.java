@@ -1,21 +1,36 @@
 package no.hvl.dat100.lab6.matriser;
 
+import static javax.swing.JOptionPane.*;
+
+import java.util.Arrays;
+
+import static java.lang.Integer.*;
+
 public class Matriser {
 
 	// a)
 	public static void skrivUt(int[][] matrise) {
 		
 		// TODO
-		throw new UnsupportedOperationException("skrivUt ikke implementert");
+		 for (int[] row : matrise) { 
+	         for (int x : row) {
+	            System.out.print(matrise[i][x] + " ");
+	         }
+	         System.out.println(); 
+	      }
 	}
 
 	// b)
 	public static String tilStreng(int[][] matrise) {
 
 		// TODO
-		throw new UnsupportedOperationException("tilStreng ikke implementert");
-		
-	}
+		String strng = "";
+		for (int[] row : matrise) {
+			strng += "\n";
+			for (int x : row) {
+			strng += x + " ";}
+			} return strng;
+		}
 
 	// c)
 	public static int[][] skaler(int tall, int[][] matrise) {
@@ -29,7 +44,9 @@ public class Matriser {
 	public static boolean erLik(int[][] a, int[][] b) {
 
 		// TODO
-		throw new UnsupportedOperationException("erLik ikke implementert");
+		if (Arrays.equals(a, b))
+			return true;
+		else return false;
 	}
 	
 	// e)
